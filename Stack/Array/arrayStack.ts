@@ -1,6 +1,7 @@
 class Stack<Type> {
-  nodes :any = [];
+  nodes = new Array<Type>()
   length = 0;
+  size = 10
   top = -1;
 
   constructor(size?: number)  {
@@ -15,7 +16,11 @@ class Stack<Type> {
     return this.top === -1;
   }
 
-  push(data: Type): number {
+  push(data: Type): number|void {
+    if (this.isFull()){
+      console.log("stack full!!!")
+      return ;
+    }
     this.top++;
     this.length++;
     this.nodes[this.top] = data;
@@ -23,40 +28,29 @@ class Stack<Type> {
     return this.length;
   }
 
-  pop(): Type{
-    const poped = this.nodes[this.top];
+  pop(): Type|void  {
+    const popped = this.peek()
     this.length--;
     this.top--;
     this.nodes.length =  this.length;
     this.verbose()
-    return this.length;
+    return popped;
   }
 
-  peek(): Type {
+  peek(): Type |void {
+    if(this.isEmpty()){
+      console.log("stack empty!!!")
+      return;
+    }
     const peeked = this.nodes[this.top];
     this.verbose()
     return peeked;
   }
 
   verbose() {
-    console.log(this.nodes)
+    // console.log(this.nodes)
   }
 
 }
 
-
-
-const stack = new Stack(10)
-console.log("isFull: ",stack.isFull())
-console.log("isEmpty: ",stack.isEmpty())
-console.log("push",stack.push(2))
-console.log(stack.push(4))
-console.log(stack.push(5))
-console.log(stack.push(9))
-console.log(stack.push(3))
-console.log("peek",stack.peek())
-console.log("pop",stack.pop())
-console.log(stack.pop())
-console.log("isFull",stack.isFull())
-console.log("push",stack.push(12))
-console.log("peek",stack.peek()
+export default Stack
