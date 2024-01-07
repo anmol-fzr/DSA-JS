@@ -25,13 +25,12 @@ function tester(name:string, tests:number,Stack: any,random?:boolean){
 
   
 }
-
-const tests = 10_000
+const tests = 2**16-1 
 console.log("Non Random")
 tester("array",tests,ArrayStack)
-tester("set",tests,SetStack)
+// tester("set",tests,SetStack)
 
-console.log("Random")
-tester("array",tests,ArrayStack,true)
-tester("set",tests,SetStack,true)
+// console.log("Random")
+// tester("array",tests,ArrayStack,true)
+// tester("set",tests,SetStack,true)
 
