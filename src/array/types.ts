@@ -1,3 +1,6 @@
-type Case = [number,number[],number[]]
-type Cases = Case[]
-export type {Case,Cases}
+type Cases<I,W> = {
+  id: number;
+  input: I,
+  want: W
+}[]
+export type {Cases}

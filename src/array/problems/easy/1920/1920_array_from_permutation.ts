@@ -5,5 +5,4 @@ function buildArray(nums: number[]): number[] {
     })
     return arr;
 };
-
 export default buildArray
