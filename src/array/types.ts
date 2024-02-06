@@ -1,5 +1,4 @@
 type Cases<I,W> = {
-  id: number;
   input: I,
   want: W
 }[]
