@@ -1,5 +1,8 @@
 # dsa-js
 
+https://github.com/anmol-fzr/DSA-JS
+[Arrays](https://github.com/anmol-fzr/DSA-JS/src/array/notes/array.md)
+[Arrays](/src/array/notes/array.md)
 To install dependencies:
 
 ```bash
@@ -11,5 +14,3 @@ To run:
 ```bash
 bun run index.ts
 ```
-
-This project was created using `bun init` in bun v1.0.16. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
